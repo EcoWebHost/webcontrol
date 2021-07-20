@@ -29,8 +29,7 @@ echo -e "\n\n"
 
 echo "Voulez-vous poursuivre l'installation ? (Oui/Non)"
 read reponse
-if [[ "$reponse" == "Oui" ]]
-then 
+if [[ "$reponse" == "Oui" ]]; then 
    
 echo -e "#---------------------------------------------------------------#" 
 echo -e "#                         Installation de crowdSec              #" 
@@ -42,5 +41,9 @@ sudo apt-get install crowdsec
 
 curl -s https://packagecloud.io/install/repositories/crowdsec/crowdsec/script.deb.sh | sudo bash
 sudo apt install crowdsec-firewall-bouncer crowdsec-firewall-bouncer-iptables 
+
+else
+    
+    ^c
 
 fi
