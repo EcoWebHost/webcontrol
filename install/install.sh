@@ -34,5 +34,13 @@ then
    
 echo -e "#---------------------------------------------------------------#" 
 echo -e "#                         Installation de crowdSec              #" 
-echo -e "#---------------------------------------------------------------#" 
+echo -e "#---------------------------------------------------------------#"
+echo -e "\n\n"
+
+curl -s https://packagecloud.io/install/repositories/crowdsec/crowdsec/script.deb.sh | sudo bash
+sudo apt-get install crowdsec
+
+curl -s https://packagecloud.io/install/repositories/crowdsec/crowdsec/script.deb.sh | sudo bash
+sudo apt install crowdsec-firewall-bouncer crowdsec-firewall-bouncer-iptables 
+
 fi
